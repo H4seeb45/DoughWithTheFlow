@@ -1,11 +1,15 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import "./card.css";
-
+import Nature from "/Nature.js";
+import { Grid } from "@material-ui/core";
 export default function ProductCard() {
   return (
     <Card>
+      <Grid container justify="flex-start">
+        <Nature class="nature" />
+      </Grid>
       <div className="flex-container">
         <div className="card transition">
           <h5 className="transition">
