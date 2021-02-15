@@ -117,14 +117,14 @@ h5.cta-container{
 }
 
 .cta {
-  color: #fff;
-  border: 2px solid #2196f3;
-  background-color: #2196f3;
-  padding: 1px 10px;
-  border-radius: 50px;
-  font-size: 17px;
+  /* color: #fff; */
+  /* border: 2px solid #2196f3; */
+  /* background-color: #2196f3; */
+  padding: 0px;
+  border-radius: 10px;
+  /* font-size: 15px; */
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 /*.card:hover .cta-container {
