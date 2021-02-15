@@ -1,0 +1,6 @@
+.grid-container {
+    display: grid;
+    column-gap: 275px;
+    row-gap: 250px;
+    align-items: center;
+  }
