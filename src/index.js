@@ -9,7 +9,7 @@ function App() {
     <div>
       <TopCard></TopCard>
 
-      <ProductCard> </ProductCard>
+      <ProductCard></ProductCard>
     </div>
   );
 }
