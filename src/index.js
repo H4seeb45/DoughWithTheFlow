@@ -8,7 +8,8 @@ function App() {
   return (
     <body>
     <div>
-      <TopCard></TopCard>
+      <TopCard>
+      </TopCard>
       <div class="grid-container">
            <div class="grid-item1">
       <ProductCard></ProductCard>
