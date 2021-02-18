@@ -15,6 +15,7 @@
   /* grid-template-columns: auto auto auto auto; */
   /* column-gap: 1px;*/
   grid-gap: 150px;
+  grid-row-gap: 240px;
 }
 .grid-item {
   /* margin-right: 150px; */

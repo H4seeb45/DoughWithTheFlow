@@ -14,8 +14,8 @@ export default function ProductCard() {
         </div>
 
         <h5 className="cta-container">
-          Chocolato<br></br>
-          <small>its delicious</small>
+          Stawberry<br></br>
+          <small>well you guess</small>
         </h5>
         <div className="cta-container-btn transition">
           <Button

@@ -84,6 +84,7 @@ h5 {
 }
 
 h5 small {
+  margin-bottom: 10px;
   font-weight: normal;
   font-size: 65%;
   color: rgba(0, 0, 0, 0.5);
