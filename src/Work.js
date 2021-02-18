@@ -6,7 +6,7 @@ const Work = (props) => (
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     width="150"
-    height="150"
+    height="130"
     viewBox="0 0 893.86671 645.61588"
   >
     <path
