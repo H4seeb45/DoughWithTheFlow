@@ -27,7 +27,10 @@ body {
 } */
 
 .card {
-  border-radius: 25px;
+  border-radius: 22px;
+  border-width: 3px;
+  border-style: outset;
+  border-color: #63b0e4;
   background-color: #fff;
   height: 225px;
   width: 150px;
@@ -51,7 +54,6 @@ body {
   width: 200px;
   z-index: 9999;
 }
-
 
 /* .card_circle {
   height: 400px;
@@ -95,7 +97,7 @@ h5 small {
 .card:hover h2 small {
   color: #fff;
 }*/
-h5.cta-container{
+h5.cta-container {
   margin-top: 117px;
 }
 
