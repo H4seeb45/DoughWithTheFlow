@@ -9,9 +9,9 @@ import Grid from "@material-ui/core/Grid";
 
 function TopCard() {
   const useStyles = makeStyles((theme) => ({
-    root: {
-      display: "flex"
-    },
+    // root: {
+    //   display: "flex"
+    // },
     details: {
       display: "flex",
       flexDirection: "row"

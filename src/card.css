@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic");
-
+.element {
+  all: none;
+}
 html,
 body {
   background-color: #eaeaea;
@@ -32,7 +34,7 @@ body {
   border-style: outset;
   border-color: #63b0e4;
   background-color: #fff;
-  height: 225px;
+  height: 235px;
   width: 150px;
   position: absolute;
   /* margin: auto; */
@@ -54,24 +56,6 @@ body {
   width: 200px;
   z-index: 9999;
 }
-
-/* .card_circle {
-  height: 400px;
-  width: 450px;
-  background: url(http://widewallpaper.info/wp-content/uploads/2015/11/Nature-HD-Wallpaper-1080p.jpg)
-    no-repeat;
-  background-size: cover;
-  position: absolute;
-  border-radius: 50%;
-  margin-left: -75px;
-  margin-top: -270px;
-} */
-
-/* .card:hover .card_circle { 
-  border-radius: 0;
-  margin-top: -130px; 
-}
-*/
 
 h5 {
   text-align: center;
@@ -111,7 +95,7 @@ h5.cta-container {
   font-family: "Noto Sans", serif;
 }
 .cta-container-btn {
-  margin-top: 177px;
+  margin-top: 180px;
   text-align: center;
   /* margin-top: 170px; */
   position: absolute;
@@ -130,8 +114,3 @@ h5.cta-container {
   text-decoration: none;
   /* font-weight: bold; */
 }
-
-/*.card:hover .cta-container {
-  margin-top: 320px;
-}
-*/
