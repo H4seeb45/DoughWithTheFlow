@@ -4,10 +4,12 @@ import "./productcard.css";
 import TopCard from "./TopCard";
 import ProductCard from "./ProductCards";
 import WorkCard from "./WorkCard";
+import NavBar from "./Navbar.js";
 
 function App() {
   return (
     <body>
+      <NavBar></NavBar>
       <div>
         <TopCard></TopCard>
         <div class="grid-container">
