@@ -6,12 +6,19 @@ import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Snackbar from "@material-ui/core/Snackbar";
+import MuiAlert from "@material-ui/lab/Alert";
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 function TopCard() {
   const useStyles = makeStyles((theme) => ({
     // root: {
-    //   display: "flex"
-    // },
+    width: "100%",
+    "& > * + *": {
+      marginTop: theme.spacing(2)
+    },
     details: {
       display: "flex",
       flexDirection: "row"
@@ -22,6 +29,19 @@ function TopCard() {
     }
   }));
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   return (
     <div style={{ marginTop: 3 }}>
@@ -30,6 +50,7 @@ function TopCard() {
           <Typography variant="h4">Products</Typography>
           <Grid container justify="flex-end">
             <Button
+              onClick={handleClick}
               style={{ borderRadius: 20 }}
               align-content="flex-end"
               text-align="right"
@@ -38,6 +59,11 @@ function TopCard() {
             >
               Add Product
             </Button>
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success">
+                Product Added Successfuly.
+              </Alert>
+            </Snackbar>
           </Grid>
         </CardContent>
         {/* <CardActions></CardActions> */}
@@ -45,4 +71,5 @@ function TopCard() {
     </div>
   );
 }
+
 export default TopCard;

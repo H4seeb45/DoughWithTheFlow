@@ -6,14 +6,13 @@ import ProductCard from "./ProductCards";
 import WorkCard from "./WorkCard";
 import Features from "./Features";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-// import "./navscript.js";
+// import { mobileMenu, closeMenu } from "./navscript";
 export default class NavBar extends React.Component {
   ComponentDidMount() {
-    const script = document.createElement("script");
-    script.src = "./navscript.js";
-    script.async = true;
-    document.body.appendChild(script);
+    require("./navscript");
   }
+  // const bar = document.querySelector(".bar");
+
   render() {
     return (
       <Router>
