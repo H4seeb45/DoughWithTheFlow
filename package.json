@@ -8,19 +8,34 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/lab": "4.0.0-alpha.57",
+    "autoprefixer": "^9.8.6",
+    "chokidar": "^3.5.1",
+    "css": "^3.0.0",
+    "postcss": "^7.0.35",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "5.2.0",
     "stylelint": "13.12.0",
-    "tailwindcss": "2.0.3"
+    "tailwind": "^4.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
   },
   "devDependencies": {
     "react-scripts": "1.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "build:style": "tailwind build src/index.css -o src/tailwind.css",
+    "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H4seeb45/DoughWithTheFlow.git"
+  },
+  "author": "Haseeb Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H4seeb45/DoughWithTheFlow/issues"
   }
 }
