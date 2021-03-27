@@ -3,7 +3,7 @@ import "../tailwind.css";
 import "../styles/navbar.css";
 export default function Features() {
   return (
-    <section class="px-4 py-20 mx-auto max-w-7xl">
+    <section class="mt-10 px-4 mx-auto max-w-7xl">
       <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
         Features
       </h2>
@@ -11,7 +11,7 @@ export default function Features() {
         Get insights to dig down into what's powering your growth the most.
       </p>
       <span class="fbar"></span>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 lg:gap-x-24 gap-y-20">
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 lg:gap-x-24 gap-y-20">
         <div>
           <div class="flex items-center justify-center w-8 h-8 mb-4 text-red-600 bg-red-100 rounded-full">
             <svg

@@ -4,20 +4,21 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div>
-      {/* <img src= alt="img" width="384" height="512"/> */}
-        {/* <div className="mx-50 max-w-3xl mx-auto my-4 flex justify-center bg-white border rounded-2xl md:p-0 shadow-xl"> */}
-          <div className="mt-3 md:flex bg-gray-100 rounded-xl p-8 md:p-0 shadow-lg">
-          <div className="md:align-items-center">
-          <img src={require('./image/mypic.png')} alt="" className="h-15 w-15 p-2 ml-4 md:block rounded-full" width="300" height="300"/>
+          {/* Parent Component */}
+          <div className="relative md:ml-10 mt-3 flex flex-row max-w-3xl bg-gray-100 rounded-xl p-6 md:p-0 shadow-md">
+          {/* Child Components */}
+          <div className="">
+          <img src={require('./image/mypic.png')} alt="" className="h-15 w-15 m-2 ml-2 md:block rounded-full border border-2 border-black" width="300" height="300"/>
           </div>
-          <div className="pt-6 pl-5 md:p-8 md:mt-50 text-left space-y-4">
+          <div className="md:pt-5 pl-5">
           <h1>A Learning Frontend Developer on his path to do what he loves and making 
           an impact by developing websites that really work.</h1> 
-          <div class="text-blue-600 mt-60" >
+          <div class="pt-5 text-blue-600 mt-auto" >
             Haseeb Ahmed
           </div>
           <div class="inline text-gray-400 mt-80" >
-            Frontend Developer
+            Frontend Developer<br/>
+            0300-0769059           
           </div>
           </div>
         </div>
