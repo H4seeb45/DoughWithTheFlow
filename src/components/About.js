@@ -5,7 +5,7 @@ export default class NavBar extends React.Component {
     return (
       <div>
           {/* Parent Component */}
-          <div className="relative md:ml-10 mt-3 flex flex-row max-w-3xl bg-gray-100 rounded-xl p-6 md:p-0 shadow-md">
+          <div className="relative md:ml-80 mt-3 flex flex-row max-w-3xl bg-gray-100 rounded-xl p-6 md:p-0 shadow-md border-2 border-green-400">
           {/* Child Components */}
           <div className="">
           <img src={require('./image/mypic.png')} alt="" className="h-15 w-15 m-2 ml-2 md:block rounded-full border border-2 border-black" width="300" height="300"/>

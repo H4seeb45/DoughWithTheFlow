@@ -16,7 +16,7 @@ export default class NavBar extends React.Component {
     return (
       <Router>
         <header class="header">
-          <nav class="navbar">
+          <nav class="navbar bg-gradient-to-r from-green-400 to-blue-500">
             <a href="#" class="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow border rounded-md">
               <Link to="/" class="text-blue-600">
                 Portfolio Home
