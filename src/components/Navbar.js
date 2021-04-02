@@ -15,63 +15,43 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <Router>
-        <header class="header">
-          <nav class="navbar bg-gradient-to-r from-green-400 to-blue-500">
-            <a href="#" class="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow border rounded-md">
-              <Link to="/" class="text-blue-600">
+        <header className="header">
+          <nav className="navbar bg-gray-800">
+            {/* <a href="/" class=""> */}
+              <Link to="/" className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md text-blue-600">
                 Portfolio Home
               </Link>
-            </a>
-            <ul class="nav-menu">
-              <li class="nav-item p-2 group border-solid border-2 rounded-lg  bg-white shadow-lg hover:border-blue-600">
-                <a
-                  href="#"
-                  class="nav-link text-base transition duration-500 ease-in-out hover:text-indigo-600"
-                >
-                  <Link to="/Features" activeClassName="bg-purple-300">
+            {/* </a> */}
+            <ul className="nav-menu">
+              <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
+                  <Link to="/Features" class="text-lg text-blue-600">
                     Features
                   </Link>
-                </a>
               </li>
-              <li class="nav-item p-2 group border-solid border-2 rounded-lg  bg-white shadow-lg hover:border-blue-600">
-                <a
-                  href="#"
-                  class="nav-link text-base transition duration-500 ease-in-out hover:text-indigo-600"
-                >
-                  <Link to="/Blog" activeClassName="bg-purple-700">
+              <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
+                  <Link to="/Blog" class="text-lg text-blue-600">
                     Blog
                   </Link>
-                </a>
               </li>
-              <li class="nav-item p-2 group border-solid border-2 rounded-lg  bg-white shadow-lg hover:border-blue-600">
-                <a
-                  href="#"
-                  class="nav-link text-base transition duration-500 ease-in-out hover:text-indigo-600"
-                >
-                  <Link to="/About" activeClassName="bg-purple-700">
+              <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
+                  <Link to="/About" class="text-lg text-blue-600">
                     About
                   </Link>
-                </a>
               </li>
-              <li class="nav-item p-2 group border-solid border-2 rounded-lg  bg-white shadow-lg hover:border-blue-600">
-                <a
-                  href="#"
-                  class="nav-link text-base transition duration-500 ease-in-out hover:text-indigo-600"
-                >
-                  <Link to="/Contact">
-                    Contact
+              <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
+                  <Link to="/ToDo" class="text-lg text-blue-600">
+                    ToDo List
                   </Link>
-                </a>
               </li>
             </ul>
-            <div class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+            <div className="hamburger">
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
             </div>
           </nav>
         </header>
-        <span class="block w-xl h-1 mx-auto my-auto bg-blue-600"></span>
+        <span className="block w-xl h-1 mx-auto my-auto bg-blue-600"></span>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -85,7 +65,7 @@ export default class NavBar extends React.Component {
           <Route path="/About">
             <About />
           </Route>
-          <Route path="/Contact">
+          <Route path="/ToDo">
             <ToDo />
           </Route>
         </Switch>
@@ -98,14 +78,14 @@ function Home() {
   return (
     <div>
       <TopCard></TopCard>
-      <div class="grid-container">
-        <div class="grid-item">
+      <div className="grid-container">
+        <div className="grid-item">
           <ProductCard></ProductCard>
         </div>
-        <div class="grid-item">
+        <div className="grid-item">
           <WorkCard></WorkCard>
         </div>
-        <div class="grid-item">
+        <div className="grid-item">
           <ProductCard></ProductCard>
         </div>
       </div>
