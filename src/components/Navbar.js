@@ -17,11 +17,9 @@ export default class NavBar extends React.Component {
       <Router>
         <header className="header">
           <nav className="navbar bg-gray-800">
-            {/* <a href="/" class=""> */}
               <Link to="/" className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md text-blue-600">
                 Portfolio Home
               </Link>
-            {/* </a> */}
             <ul className="nav-menu">
               <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
                   <Link to="/Features" class="text-lg text-blue-600">

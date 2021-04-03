@@ -92,8 +92,8 @@ a {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #fff;
-    width: 100%;
+    background-color: rgb(26, 24, 37);
+    width: 80%;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
