@@ -34,7 +34,7 @@ body {
   border-style: outset;
   border-color: #63b0e4;
   background-color: #fff;
-  height: 235px;
+  height: 250px;
   width: 158px;
   position: absolute;
   /* margin: auto; */
@@ -95,7 +95,7 @@ h5.cta-container {
   font-family: "Noto Sans", serif;
 }
 .cta-container-btn {
-  margin-top: 180px;
+  margin-top: 190px;
   text-align: center;
   /* margin-top: 170px; */
   position: absolute;

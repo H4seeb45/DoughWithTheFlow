@@ -1,0 +1,6 @@
+.flex-base{
+    width: 1500px
+}
+.flex-base>* {
+    flex: 1 1 250px;
+}
