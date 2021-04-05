@@ -3,21 +3,22 @@ import React from "react";
 import "../styles/productcard.css";
 import TopCard from "./TopCard";
 import ProductCard from "./ProductCards";
-import WorkCard from "./WorkCard";
 import Features from "./Features";
 import About from "./About";
 import "../tailwind.css";
 import "./navscript";
 import ToDo from "./todolist";
 import Blog from "./Blog";
+import "../styles/animations.css"
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import { mobileMenu, closeMenu } from "./navscript";
 export default class NavBar extends React.Component {
   render() {
     return (
       <Router>
-        <header className="header">
-          <nav className="navbar bg-gray-800">
+        <header className="header animRight">
+          <nav className="navbar navbg">
             <Link
               to="/"
               className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md text-blue-600"
@@ -78,14 +79,14 @@ export default class NavBar extends React.Component {
 
 function Home() {
   return (
-    <div>
+    <div className="p-4">
       <TopCard></TopCard>
       <div className="grid-container">
         <div className="grid-item">
           <ProductCard></ProductCard>
         </div>
         <div className="grid-item">
-          <WorkCard></WorkCard>
+          <ProductCard></ProductCard>
         </div>
         <div className="grid-item">
           <ProductCard></ProductCard>
@@ -95,34 +96,4 @@ function Home() {
   );
 }
 
-// function Features() {
-//   return (
-//     <div>
-//       <h2>Features</h2>
-//     </div>
-//   );
-// }
 
-// function Blog() {
-//   return (
-//     <div>
-//       <h2>Blog</h2>
-//     </div>
-//   );
-// }
-
-// function About() {
-//   return (
-//     <div>
-//       <h2>About</h2>
-//     </div>
-//   );
-// }
-
-// function Contact() {
-//   return (
-//     <div>
-//       <h2>Contact</h2>
-//     </div>
-//   );
-// }

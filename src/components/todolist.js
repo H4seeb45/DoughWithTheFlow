@@ -6,6 +6,8 @@ import DeleteModal from "./DeleteModal";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import InputModal from "./InputModal";
+import "../styles/animations.css"
+
 
 export default function todolist() {
   const [imageObj, setImageId] = useState({
@@ -88,6 +90,7 @@ export default function todolist() {
           setIsLoaded(true);
         },
         (err) => {
+          err.message="Failed to connect"
           setErr(err);
         }
       );
@@ -95,7 +98,10 @@ export default function todolist() {
 
   if (err) {
     //if there is any error show this screen
-    return <div> {err.message} </div>;
+    return (<div className="w-50 mx-auto p-20 animRight">
+             <div className="flex mx-auto bg-red-500 p-2 rounded text-center">Application Error: {err.message}. Please check your internet connection and try again.</div> 
+               
+    </div>);
     //if isLoaded varibale is false it means content is still loading
   } else if (!isLoaded) {
     return (
