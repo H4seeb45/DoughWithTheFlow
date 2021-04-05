@@ -10,16 +10,24 @@ import InputModal from "./InputModal"
 
 
 export default function todolist() {
+  const [imageObj, setImageId] = useState({
+    imageId: null,
+    todoId: null
+  });
   const [todoItems, setItems] = useState([]); //todo items objects and function to set them.
   let [isLoaded, setIsLoaded] = useState(false); //isloaded variable to control loading animation
   let [modalShow, setModalShow] = useState(false); //modalshow variable to control modal confirmation dialogue
   const [open, setOpen] = useState(false); //open variable to set alert open or close.
-  const [err, setErr] = useState(null);
+  const [err, setErr] = useState(null);// variable for error handling
   const [varInputModal,setInputModal] = useState(false);
   var deleteId = 1;
   // function to show alerts
   function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
+  // function to add image id in state
+  function addImageId(imgid,tid){
+    setImageId({imageId:imgid,todoId:tid})
   }
   //function to show Alert.
   const showAlert = () => {

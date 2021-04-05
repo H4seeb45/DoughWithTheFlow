@@ -5,6 +5,7 @@ import "../styles/modal.css"
 // import "./modalscript"
 
 function UploadImage(){
+
     document.querySelector('input[type="file"]').addEventListener('change', function() {
         if (this.files && this.files[0]) {
             console.log("Function called.")
@@ -14,11 +15,17 @@ function UploadImage(){
             }
   
             img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+            console.log(img.src)
+            // setState({ selectedFile: files[0] })
         }
     });
 }
 
 export default function InputModal({show,handleClose}) {
+//     const [imageObj, setImageId] = useState({
+//     imageId: null,
+//     todoId: null
+//   });
     const showHideClassName = show ? "modal display-block" : "modal display-none";
     return (
         <div className={showHideClassName}>

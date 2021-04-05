@@ -9,6 +9,7 @@ import About from "./About";
 import "../tailwind.css";
 import "./navscript";
 import ToDo from "./todolist";
+import Blog from "./Blog"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import { mobileMenu, closeMenu } from "./navscript";
 export default class NavBar extends React.Component {
@@ -100,13 +101,13 @@ function Home() {
 //   );
 // }
 
-function Blog() {
-  return (
-    <div>
-      <h2>Blog</h2>
-    </div>
-  );
-}
+// function Blog() {
+//   return (
+//     <div>
+//       <h2>Blog</h2>
+//     </div>
+//   );
+// }
 
 // function About() {
 //   return (
