@@ -9,7 +9,7 @@ import About from "./About";
 import "../tailwind.css";
 import "./navscript";
 import ToDo from "./todolist";
-import Blog from "./Blog"
+import Blog from "./Blog";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import { mobileMenu, closeMenu } from "./navscript";
 export default class NavBar extends React.Component {
@@ -18,29 +18,32 @@ export default class NavBar extends React.Component {
       <Router>
         <header className="header">
           <nav className="navbar bg-gray-800">
-              <Link to="/" className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md text-blue-600">
-                Portfolio Home
-              </Link>
+            <Link
+              to="/"
+              className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md text-blue-600"
+            >
+              Portfolio Home
+            </Link>
             <ul className="nav-menu">
               <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
-                  <Link to="/Features" class="text-lg text-blue-600">
-                    Features
-                  </Link>
+                <Link to="/Features" class="text-lg text-blue-600">
+                  Features
+                </Link>
               </li>
               <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
-                  <Link to="/Blog" class="text-lg text-blue-600">
-                    Blog
-                  </Link>
+                <Link to="/Blog" class="text-lg text-blue-600">
+                  Blog
+                </Link>
               </li>
               <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
-                  <Link to="/About" class="text-lg text-blue-600">
-                    About
-                  </Link>
+                <Link to="/About" class="text-lg text-blue-600">
+                  About
+                </Link>
               </li>
               <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
-                  <Link to="/ToDo" class="text-lg text-blue-600">
-                    ToDo List
-                  </Link>
+                <Link to="/ToDo" class="text-lg text-blue-600">
+                  ToDo List
+                </Link>
               </li>
             </ul>
             <div className="hamburger">
@@ -88,7 +91,6 @@ function Home() {
           <ProductCard></ProductCard>
         </div>
       </div>
-         
     </div>
   );
 }

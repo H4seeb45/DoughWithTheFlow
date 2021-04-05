@@ -5,29 +5,27 @@ import "../styles/loader.css";
 import DeleteModal from "./DeleteModal";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
-import InputModal from "./InputModal"
-
-
+import InputModal from "./InputModal";
 
 export default function todolist() {
   const [imageObj, setImageId] = useState({
     imageId: null,
-    todoId: null
+    todoId: null,
   });
   const [todoItems, setItems] = useState([]); //todo items objects and function to set them.
   let [isLoaded, setIsLoaded] = useState(false); //isloaded variable to control loading animation
   let [modalShow, setModalShow] = useState(false); //modalshow variable to control modal confirmation dialogue
   const [open, setOpen] = useState(false); //open variable to set alert open or close.
-  const [err, setErr] = useState(null);// variable for error handling
-  const [varInputModal,setInputModal] = useState(false);
+  const [err, setErr] = useState(null); // variable for error handling
+  const [varInputModal, setInputModal] = useState(false);
   var deleteId = 1;
   // function to show alerts
   function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
   }
   // function to add image id in state
-  function addImageId(imgid,tid){
-    setImageId({imageId:imgid,todoId:tid})
+  function addImageId(imgid, tid) {
+    setImageId({ imageId: imgid, todoId: tid });
   }
   //function to show Alert.
   const showAlert = () => {
@@ -49,10 +47,10 @@ export default function todolist() {
   function hideModal() {
     setModalShow(false);
   }
-  function showInputModal(){
+  function showInputModal() {
     setInputModal(true);
   }
-  function hideInputModal(){
+  function hideInputModal() {
     setInputModal(false);
   }
   // Function to show modal for confirming item deletion.
@@ -85,7 +83,7 @@ export default function todolist() {
       })
       .then(
         (todoObjects) => {
-          //filtering items because of light rendering and setting them as todoobjects. 
+          //filtering items because of light rendering and setting them as todoobjects.
           setItems(todoObjects.filter((object) => object.id <= 11));
           setIsLoaded(true);
         },
@@ -122,8 +120,7 @@ export default function todolist() {
         <InputModal
           show={varInputModal}
           handleClose={hideInputModal}
-        >
-        </InputModal>
+        ></InputModal>
         <section class="text-gray-400 bg-gray-900">
           <div class="container px-5 py-20 mx-auto">
             <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
@@ -172,10 +169,10 @@ export default function todolist() {
             })}
           </div>
           <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
-              <Alert onClose={handleClose} severity="success">
-                Item Deleted Successfuly.
-              </Alert>
-            </Snackbar>
+            <Alert onClose={handleClose} severity="success">
+              Item Deleted Successfuly.
+            </Alert>
+          </Snackbar>
         </section>
       </div>
     );
