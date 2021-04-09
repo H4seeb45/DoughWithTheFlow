@@ -10,10 +10,10 @@ import "../styles/animations.css"
 
 
 export default function todolist() {
-  const [imageObj, setImageId] = useState({
-    imageId: null,
-    todoId: null,
-  });
+  // const [imageObj, setImageId] = useState({
+  //   imageId: null,
+  //   todoId: null,
+  // });
   const [todoItems, setItems] = useState([]); //todo items objects and function to set them.
   let [isLoaded, setIsLoaded] = useState(false); //isloaded variable to control loading animation
   let [modalShow, setModalShow] = useState(false); //modalshow variable to control modal confirmation dialogue
@@ -26,9 +26,9 @@ export default function todolist() {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
   }
   // function to add image id in state
-  function addImageId(imgid, tid) {
-    setImageId({ imageId: imgid, todoId: tid });
-  }
+  // function addImageId(imgid, tid) {
+  //   setImageId({ imageId: imgid, todoId: tid });
+  // }
   //function to show Alert.
   const showAlert = () => {
     setOpen(true);
