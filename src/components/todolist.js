@@ -66,7 +66,7 @@ export default function todolist() {
     deleteId = localStorage.getItem("id");
     var elementPos = todoItems.findIndex(function (item) {
       console.log(typeof deleteId);
-      return item.id === parseInt(deleteId);
+      return item.id === parseInt(deleteId,10);
     });
     todoItems.splice(elementPos, 1);
     hideModal();
