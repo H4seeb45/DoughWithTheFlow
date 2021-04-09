@@ -3,7 +3,7 @@
   "version": "0.0.222",
   "description": "Live demo",
   "keywords": [],
-  "homepage": "https://codesandbox.io/s/4j7m47vlm4",
+  "homepage": "https://github.com/H4seeb45/DoughWithTheFlow.git",
   "main": "index.js",
   "dependencies": {
     "@material-ui/core": "latest",
