@@ -11,7 +11,7 @@ export default class About extends React.Component {
           <div className="">
           <img src={require('./image/mypic.png')} alt="" className="h-15 w-15 m-2 ml-2 md:block rounded-full border border-2 border-black" width="300" height="300"/>
           </div>
-          <div className="md:pt-5 pl-5">
+          <div className="md:pt-5 pl-5 animBottom">
           <h1>A Learning Frontend Developer on his path to do what he loves and making 
           an impact by developing websites that really work.</h1> 
           <div class="pt-5 text-blue-600 mt-auto" >

@@ -9,7 +9,7 @@ import "../tailwind.css";
 import "./navscript";
 import ToDo from "./todolist";
 import Blog from "./Blog";
-import "../styles/animations.css"
+import "../styles/animations.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import { mobileMenu, closeMenu } from "./navscript";
@@ -17,11 +17,11 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <Router>
-        <header className="header animRight">
+        <header className="header">
           <nav className="navbar navbg">
             <Link
               to="/"
-              className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md text-blue-600"
+              className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 text-gray-800"
             >
               Portfolio Home
             </Link>

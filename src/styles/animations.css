@@ -36,8 +36,27 @@
     }
 }
 
+.animBottom{
+    animation-name: moveInBottom;
+    animation-duration: 1.3s;
+    animation-delay:2.3;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom{
+    0% {
+         transform: translateY(30px);
+         opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
+
 /* Customs Colors */
 /* Custom Nav Background */
 .navbg{
-    background-image: linear-gradient(to right,rgb(61, 61, 61),black);
+    background-image: linear-gradient(to right,rgb(0, 66, 141),black);
 }
