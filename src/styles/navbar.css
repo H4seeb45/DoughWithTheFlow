@@ -41,7 +41,7 @@ a {
   margin: 5px auto;
   /* -webkit-transition: all 0.3s ease-in-out; */
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: #0467fc;
 }
 .fbar {
   display: block;
@@ -55,7 +55,7 @@ a {
 
 .nav-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -97,16 +97,20 @@ a {
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 20px 30px 20px rgba(2, 49, 177, 0.479);
   }
 
   .nav-menu.active {
-    left: 10px;
+    left: 2.5rem;
     right: 10px;
   }
 
   .nav-item {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
+    border-radius: 20px;
+    padding: 1rem;
+    border-color: aqua;
+    border-style: solid;
   }
 
   .hamburger {
