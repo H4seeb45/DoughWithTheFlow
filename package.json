@@ -12,6 +12,7 @@
     "autoprefixer": "^9.8.6",
     "chokidar": "^3.5.1",
     "css": "^3.0.0",
+    "lottie-web": "^5.7.8",
     "postcss": "^7.0.35",
     "react": "latest",
     "react-dom": "latest",

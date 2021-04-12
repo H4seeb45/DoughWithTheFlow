@@ -4,7 +4,7 @@ import "../styles/navbar.css";
 export default function Features() {
   return (
     <section class="mt-10 px-4 mx-auto max-w-7xl">
-      <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
+      <h2 class="mb-1 text-3xl leading-tight text-white">
         Features
       </h2>
       <p class="mb-16 text-lg text-gray-500">
@@ -28,7 +28,7 @@ export default function Features() {
               />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Personal Emails
           </h3>
           <p class="text-sm text-gray-500">
@@ -52,7 +52,7 @@ export default function Features() {
               />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Why a beaker icon?
           </h3>
           <p class="text-sm text-gray-500">
@@ -76,7 +76,7 @@ export default function Features() {
               />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Clickable
           </h3>
           <p class="text-sm text-gray-500">
@@ -110,7 +110,7 @@ export default function Features() {
               />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Finger Printing
           </h3>
           <p class="text-sm text-gray-500">
@@ -134,7 +134,7 @@ export default function Features() {
               />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Performance on Fire
           </h3>
           <p class="text-sm text-gray-500">
@@ -158,7 +158,7 @@ export default function Features() {
               />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Love is in the Air
           </h3>
           <p class="text-sm text-gray-500">
@@ -182,7 +182,7 @@ export default function Features() {
               />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Thunder and Lightning
           </h3>
           <p class="text-sm text-gray-500">
@@ -202,7 +202,7 @@ export default function Features() {
               <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Puzzles
           </h3>
           <p class="text-sm text-gray-500">
@@ -226,7 +226,7 @@ export default function Features() {
               />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Sparkles
           </h3>
           <p class="text-sm text-gray-500">
@@ -246,7 +246,7 @@ export default function Features() {
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Stars
           </h3>
           <p class="text-sm text-gray-500">
@@ -270,7 +270,7 @@ export default function Features() {
               />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Support
           </h3>
           <p class="text-sm text-gray-500">
@@ -294,7 +294,7 @@ export default function Features() {
               <path d="M11 4a1 1 0 10-2 0v1a1 1 0 002 0V4zM10 7a1 1 0 011 1v1h2a1 1 0 110 2h-3a1 1 0 01-1-1V8a1 1 0 011-1zM16 9a1 1 0 100 2 1 1 0 000-2zM9 13a1 1 0 011-1h1a1 1 0 110 2v2a1 1 0 11-2 0v-3zM7 11a1 1 0 100-2H4a1 1 0 100 2h3zM17 13a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM16 17a1 1 0 100-2h-3a1 1 0 100 2h3z" />
             </svg>
           </div>
-          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">
+          <h3 class="mb-2 text-base leading-tight text-white">
             Finger Printing for Robots
           </h3>
           <p class="text-sm text-gray-500">

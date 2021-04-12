@@ -1,8 +1,8 @@
-import React from "react";
+import  React, {useState} from "react";
 import "../styles/navbar.css";
 import "../tailwind.css";
 import "../styles/modal.css";
-// import "./modalscript"
+import DoneAnimation from "./DoneAnimation";
 
 function UploadImage() {
   document
@@ -22,29 +22,44 @@ function UploadImage() {
     });
 }
 
-export default function InputModal({ show, handleClose }) {
+export default function InputModal({ show, handleClose, setItems}) {
+ 
+  const [animationSwitch,setAnimationSwitch]=useState(false);
+   
+  let id=12;
   //     const [imageObj, setImageId] = useState({
   //     imageId: null,
   //     todoId: null
   //   });
   const showHideClassName = show ? "modal display-block" : "modal display-none";
+  let handletodoSave=(event=>{
+    let todoDescription = document.getElementById("todoDescription").value;
+    let toaddItem = {
+      userId: Math.random(),
+      id: id++,
+      title: todoDescription
+    }
+    setItems((prevtodos)=>prevtodos.concat(toaddItem));
+    document.getElementById("todoDescription").value="";
+    setAnimationSwitch(true);
+    //Close InputModal 
+    setTimeout(() =>{ 
+      handleClose()
+      setAnimationSwitch(false);
+    }, 1000);
+
+    
+  });
   return (
     <div className={showHideClassName}>
-      <section className="modal-main">
+       <DoneAnimation showAnim={animationSwitch} animSwitch={setAnimationSwitch}></DoneAnimation>
+      <section className="modal-main rounded shadow-md">
         {/* Input Modal Content */}
         <div>
           <div class="mx-auto">
-            {/* <div class="md:col-span-1">
-                                            <div class="px-4 sm:px-0">
-                                                <h3 class="text-lg font-medium leading-6 text-gray-900">Profile</h3>
-                                                <p class="mt-1 text-sm text-gray-600">
-                                                This information will be displayed publicly so be careful what you share.
-                                                </p>
-                                            </div>
-                                </div> */}
             <div class="mt-5 md:mt-0 flex justify-center align-center">
               {/* method="POST" */}
-              <form action="#">
+              
                 <div class="shadow sm:rounded-md sm:overflow-hidden text-blue-600">
                   <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                     <h1 class="text-lg text-center">Add Todo Item</h1>
@@ -57,7 +72,7 @@ export default function InputModal({ show, handleClose }) {
                       </label>
                       <div class="mt-1">
                         <textarea
-                          id="about"
+                          id="todoDescription"
                           name="about"
                           rows="3"
                           class="p-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
@@ -131,7 +146,9 @@ export default function InputModal({ show, handleClose }) {
                     </div>
                   </div>
                   <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                    <button class="inline-flex mr-2 justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <button 
+                      onClick={handletodoSave}
+                      class="inline-flex mr-2 justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                       Save
                     </button>
                     <button
@@ -142,7 +159,7 @@ export default function InputModal({ show, handleClose }) {
                     </button>
                   </div>
                 </div>
-              </form>
+              
             </div>
           </div>
         </div>

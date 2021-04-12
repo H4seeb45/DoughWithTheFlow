@@ -17,7 +17,7 @@ function TopCard() {
     // root: {
     width: "100%",
     "& > * + *": {
-      marginTop: theme.spacing(2),
+      marginTop: theme.spacing(1),
     },
     details: {
       display: "flex",

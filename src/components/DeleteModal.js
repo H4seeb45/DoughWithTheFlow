@@ -3,7 +3,19 @@ import "../styles/navbar.css";
 import "../tailwind.css";
 import "../styles/modal.css";
 
-export default function DeleteModal({ show, handleClose, delItem }) {
+export default function DeleteModal({ show, handleClose, setTodos, showAlert }) {
+    // actual function to delete the todo Item.
+    function deleteItem() {
+      let todelItem = localStorage.getItem("id");
+      setTodos((prevTodos) => {
+        return prevTodos.filter((t) => {
+          return t.id !== parseInt(todelItem,10);
+        });
+      });
+      handleClose();
+      showAlert();
+    }
+
   const showHideClassName = show ? "modal display-block" : "modal display-none";
   return (
     <div className={showHideClassName}>
@@ -27,7 +39,7 @@ export default function DeleteModal({ show, handleClose, delItem }) {
               </p>
               <div class="flex items-center justify-between gap-4 w-full mt-8">
                 <button
-                  onClick={() => delItem("true")}
+                  onClick={deleteItem}
                   type="button"
                   class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
                 >
