@@ -1,0 +1,62 @@
+/* Animations */
+.animLeft{
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-delay:0.7;
+    animation-timing-function: ease-out;
+}
+@keyframes moveInLeft{
+    0% {
+         transform: translateX(-100px);
+    }
+    70% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.animRight{
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-delay:1.7;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInRight{
+    0% {
+         transform: translateX(100px);
+    }
+    70% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.animBottom{
+    animation-name: moveInBottom;
+    animation-duration: 1.3s;
+    animation-delay:2.3;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom{
+    0% {
+         transform: translateY(30px);
+         opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
+
+/* Customs Colors */
+/* Custom Nav Background */
+.navbg{
+    background-image: linear-gradient(to right,rgb(0, 66, 141),black);
+}

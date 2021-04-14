@@ -1,7 +1,7 @@
 // import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import "../styles/card.css";
-import Nature from "../components/Nature";
+import Nature from "./Nature";
 // import { Grid } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import React from "react";
@@ -9,14 +9,17 @@ export default function ProductCard() {
   return (
     <Card>
       <div className="card transition">
+       <div className="mt-2 transition">
+       <Nature/>
+       </div>
         <div className="cta-container transition">
-          <Nature />
+          <h5>
+          Chocolato
+          <small><p>its delicious</p></small>
+        </h5>
         </div>
 
-        <h5 className="cta-container">
-          Chocolato<br></br>
-          <small>its delicious</small>
-        </h5>
+        
         <div className="cta-container-btn transition">
           <Button
             className="cta"

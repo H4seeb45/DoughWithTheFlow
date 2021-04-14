@@ -1,7 +1,7 @@
 // const bar = document.querySelector(".bar");
 window.onload = function () {
   const navMenu = document.querySelector(".nav-menu");
-  const navLink = document.querySelectorAll(".nav-link");
+  const navLink = document.querySelectorAll(".nav-item");
   const hamburger = document.querySelector(".hamburger");
 
   hamburger.addEventListener("click", mobileMenu);

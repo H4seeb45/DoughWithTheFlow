@@ -5,8 +5,6 @@ const Nature = (props) => (
     id="af1e465b-e5dc-47c7-a754-85264e3dba56"
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
-    width="150"
-    height="150"
     viewBox="0 0 916 587.36599"
   >
     <circle cx="248.80709" cy="123.96002" r="73" fill="#ff6584" />

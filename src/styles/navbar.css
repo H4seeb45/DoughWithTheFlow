@@ -13,7 +13,14 @@ html {
 
 li {
   list-style: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
 
 a {
   text-decoration: none;
@@ -25,10 +32,25 @@ a {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 0rem 1.5rem;
+  background: linear-gradient(300deg, #010f1d, rgba(84, 86, 107, 1), #ffffff)
+  /* background-color: #101010; */
 }
+
+.sticky {
+  /* position: fixed; */
+  display:relative;
+  top: 0;
+  width: 100%;
+}
+
+.reactlogo{
+  display:relative;
+  max-width:80px;
+}
+
 
 .hamburger {
   display: none;
@@ -41,7 +63,7 @@ a {
   margin: 5px auto;
   /* -webkit-transition: all 0.3s ease-in-out; */
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: #0467fc;
 }
 .fbar {
   display: block;
@@ -55,7 +77,7 @@ a {
 
 .nav-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -63,7 +85,16 @@ a {
   /* border: 2px solid #fff; */
   /* border-radius: 5px; */
   margin-left: 5rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   /* background: rgb(224, 6, 79); */
+}
+.nav-item:first-child{
+  margin-left: 30rem;
 }
 
 .nav-link {
@@ -82,31 +113,43 @@ a {
 .nav-logo {
   font-size: 2.1rem;
   font-weight: 500;
-  color: #482ff7;
+  color: #000000;
+  margin-left: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    z-index: 999;
+    z-index: 99999;
     left: -100%;
-    top: 5rem;
+    top: 8rem;
     flex-direction: column;
     background-color: rgb(26, 24, 37);
-    width: 80%;
+    width: 50%;
     border-radius: 10px;
-    text-align: center;
+    text-align: flex-start;
+    justify-content: space-evenly;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 20px 30px 20px rgba(2, 49, 177, 0.479);
   }
 
   .nav-menu.active {
-    left: 10px;
-    right: 10px;
+    left: 1rem;
+  }
+  .reactlogo{
+    display:relative;
+    max-width:50px;
   }
 
   .nav-item {
-    margin: 2.5rem 0;
+    margin: 1rem 0;
+    border-radius: 1rem solid green;
+    padding: 0.5rem;
+  }
+  
+
+  .nav-item:first-child{
+    margin-left: 0rem;
   }
 
   .hamburger {

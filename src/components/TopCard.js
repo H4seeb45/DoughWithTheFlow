@@ -17,16 +17,16 @@ function TopCard() {
     // root: {
     width: "100%",
     "& > * + *": {
-      marginTop: theme.spacing(2)
+      marginTop: theme.spacing(1),
     },
     details: {
       display: "flex",
-      flexDirection: "row"
+      flexDirection: "row",
     },
     content: {
       display: "flex",
-      flex: "1 0 auto"
-    }
+      flex: "1 0 auto",
+    },
   }));
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);

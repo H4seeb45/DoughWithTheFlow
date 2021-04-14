@@ -1,6 +1,15 @@
-.flex-base{
-    width: 1500px
+.flex-container{
+    
+    width: 50vw;
+    top: 30px;
 }
-.flex-base>* {
-    flex: 1 1 250px;
+.delete-button{
+    left: 50vw;
+}
+@media only screen and (max-width: 768px) { 
+    .flex-container{
+        left: 10vw;
+        width: 90vw;
+        top: 30px;
+    }
 }

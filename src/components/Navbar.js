@@ -2,47 +2,65 @@ import "../styles/navbar.css";
 import React from "react";
 import "../styles/productcard.css";
 import TopCard from "./TopCard";
-import ProductCard from "./ProductCards";
-import WorkCard from "./WorkCard";
+import ProductCard from "./ProductCardTemplate";
 import Features from "./Features";
 import About from "./About";
 import "../tailwind.css";
 import "./navscript";
 import ToDo from "./todolist";
+import Blog from "./Blog";
+import "../styles/animations.css";
+import lottie from "lottie-web";
+import ReactIcon from "../assets/anims/reacticon.json";
+import "../styles/normalise.css";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import { mobileMenu, closeMenu } from "./navscript";
-export default class NavBar extends React.Component {
-  render() {
+export default function NavBar () {
+  React.useEffect(() => {
+    lottie.loadAnimation({
+        loop: true,
+        autoplay:true,
+      container: document.querySelector("#react-logo"),
+      animationData: ReactIcon
+    });
+  }, []);
     return (
       <Router>
         <header className="header">
-          <nav className="navbar bg-gray-800">
-              <Link to="/" className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md text-blue-600">
-                Portfolio Home
-              </Link>
+        
+          <nav className="navbar sticky">
+          <div id="react-logo"  className="reactlogo"></div>
+            <Link
+              to="/"
+              className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 text-gray-800"
+            >
+            
+              Portfolio Home
+            </Link>
             <ul className="nav-menu">
-              <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
-                  <Link to="/Features" class="text-lg text-blue-600">
-                    Features
-                  </Link>
+              <li className="nav-item  tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md hover:bg-blue-500 ">
+                <Link to="/Features" class="tansition duration-500 ease-in-out p-4 text-lg text-blue-600 hover:text-white">
+                  Features
+                </Link>
               </li>
-              <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
-                  <Link to="/Blog" class="text-lg text-blue-600">
-                    Blog
-                  </Link>
+              <li className="nav-item tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow hover:bg-blue-500 rounded-md">
+                <Link to="/Blog" class="tansition duration-500 ease-in-out p-4 text-lg text-blue-600 hover:text-white">
+                  Blog
+                </Link>
               </li>
-              <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
-                  <Link to="/About" class="text-lg text-blue-600">
-                    About
-                  </Link>
+              <li className="nav-item tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md hover:bg-blue-500">
+                <Link to="/About" class="tansition duration-500 ease-in-out p-4 text-lg text-blue-600 hover:text-white">
+                  About
+                </Link>
               </li>
-              <li className="nav-item p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md">
-                  <Link to="/ToDo" class="text-lg text-blue-600">
-                    ToDo List
-                  </Link>
+              <li className="nav-item tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md hover:bg-blue-500">
+                <Link to="/ToDo" class="tansition duration-500 ease-in-out p-4 text-lg text-blue-600 hover:text-white">
+                  Todo List
+                </Link>
               </li>
             </ul>
-            <div className="hamburger">
+            <div className="hamburger border border-black py-1 px-2">
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>
@@ -70,56 +88,19 @@ export default class NavBar extends React.Component {
       </Router>
     );
   }
-}
+
 
 function Home() {
   return (
-    <div>
+    <div className="p-4 homebody">
       <TopCard></TopCard>
       <div className="grid-container">
         <div className="grid-item">
           <ProductCard></ProductCard>
         </div>
-        <div className="grid-item">
-          <WorkCard></WorkCard>
-        </div>
-        <div className="grid-item">
-          <ProductCard></ProductCard>
-        </div>
       </div>
-         
     </div>
   );
 }
 
-// function Features() {
-//   return (
-//     <div>
-//       <h2>Features</h2>
-//     </div>
-//   );
-// }
 
-function Blog() {
-  return (
-    <div>
-      <h2>Blog</h2>
-    </div>
-  );
-}
-
-// function About() {
-//   return (
-//     <div>
-//       <h2>About</h2>
-//     </div>
-//   );
-// }
-
-// function Contact() {
-//   return (
-//     <div>
-//       <h2>Contact</h2>
-//     </div>
-//   );
-// }
