@@ -4,41 +4,47 @@ import "../tailwind.css";
 import "../styles/modal.css";
 import DoneAnimation from "./DoneAnimation";
 
-function UploadImage() {
-  document
-    .querySelector('input[type="file"]')
-    .addEventListener("change", function () {
-      if (this.files && this.files[0]) {
-        console.log("Function called.");
-        var img = document.querySelector("img");
-        img.onload = () => {
-          URL.revokeObjectURL(img.src); // no longer needed, free memory
-        };
 
-        img.src = URL.createObjectURL(this.files[0]); // set src to blob url
-        console.log(img.src);
-        // setState({ selectedFile: files[0] })
-      }
-    });
-}
 
 export default function InputModal({ show, handleClose, setItems}) {
- 
-  const [animationSwitch,setAnimationSwitch]=useState(false);
-   
-  let id=12;
-  //     const [imageObj, setImageId] = useState({
-  //     imageId: null,
-  //     todoId: null
-  //   });
+
+  const [animationSwitch,setAnimationSwitch]=useState(false); 
+  const [imgid,setImgId]=useState(12);
+  
   const showHideClassName = show ? "modal display-block" : "modal display-none";
+  const file={};
+  let key=1;
+  // Image Upload Function
+  function UploadImage() {
+    document.querySelector('input[type="file"]')
+      .addEventListener("change", function () {
+        if (this.files && this.files[0]) {
+
+          console.log("Function called.");
+          var img = document.querySelector("img");
+          img.onload = () => {
+            URL.revokeObjectURL(img.src); // no longer needed, free memory
+          };
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          file.preview = URL.createObjectURL(this.files[0]);
+          file.key=key++;
+          // setState({ selectedFile: files[0] })
+        }
+      });
+      console.log(file);
+  }
+
   let handletodoSave=(event=>{
     let todoDescription = document.getElementById("todoDescription").value;
+    UploadImage();
+    console.log("handletodosavefunction",file);
     let toaddItem = {
       userId: Math.random(),
-      id: id++,
-      title: todoDescription
+      id: imgid,
+      title: todoDescription,
+      image: file.preview
     }
+    setImgId((prev)=>prev=prev+1);
     setItems((prevtodos)=>prevtodos.concat(toaddItem));
     document.getElementById("todoDescription").value="";
     setAnimationSwitch(true);
@@ -47,9 +53,8 @@ export default function InputModal({ show, handleClose, setItems}) {
       handleClose()
       setAnimationSwitch(false);
     }, 1000);
-
-    
   });
+
   return (
     <div className={showHideClassName}>
        <DoneAnimation showAnim={animationSwitch} animSwitch={setAnimationSwitch}></DoneAnimation>

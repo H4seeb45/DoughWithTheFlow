@@ -7,7 +7,8 @@ import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import InputModal from "./InputModal";
 import "../styles/animations.css";
-import "../styles/normalise.css"
+import "../styles/normalise.css";
+
 
 
 export default function todolist() {
@@ -110,54 +111,67 @@ export default function todolist() {
             ></InputModal>
             {/* bg-gray-900 */}
             <section class="text-gray-400">
-                          <div class="container px-5 py-5 mx-auto">
-                              <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-                                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">
+                          <div class="mt-3 container px-5 mx-auto">
+                              <div class="flex flex-wrap w-full flex-col  items-center text-center">
+                                <h1 class="mt-1 text-4xl lg:text-5xl font-medium title-font mb-1 text-white">
                                   To Do Items List
                                 </h1>
-                                <p class="lg:w-1/2 w-full leading-relaxed text-opacity-80">
+                                <p class="lg:w-1/2 text-xl w-full leading-relaxed text-opacity-80">
                                   Todo Items given are being loaded via RESTApi. You can add or
                                   delete item.
                                 </p>
                               </div>
                               </div>
-                              
-                              {/* Start of Dynamic comments Cards */}
-                              {todoItems.map((item) => {
-                                      return (
-                                          <div key={item.id} class="flex align-start space-between md:mx-14 my-2 p-5 lg:py-3 lg:px-11">
-                                            <div class="w-xl md:w-full p-2">
-                                              <div class="flex border border-gray-700 border-opacity-75 p-2 bg-gray-100 rounded-lg">
-
-                                                  <div class="flex-none bg-black w-14 h-14 bg-gray-800">
-                                                    <img
-                                                      src={require("./image/mypic.png")}
-                                                      alt=""
-                                                      className="rounded-full lg:rounded-none"
-                                                    ></img>
-                                                  </div>
-                                                <button
+                              <div className="text-center mt-10">
+                              <button
                                                   onClick={() => showInputModal()}
                                                   type="button"
-                                                  class="bg-green-200 ml-2 xs:ml-1 xs:w-10 w-15 h-10 inline-block rounded px-2 border border-gray-800 text-green-500 hover:bg-green-500 hover:text-white hover:ring-indigo-500 hover:ring-offset-indigo-200"
+                                                  class="bg-green-200 w-40 h-15 py-3 rounded-full border border-gray-800 text-green-500 hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                                 >
-                                                  Add
+                                                  Add Todo
                                                 </button>
+                                                </div>
+                              
+                              {/* Start of Dynamic comments Cards */}
+                               {/* <div key={item.id} class="flex-1 flex-wrap align-center md:mx-14 mx-3 p-9"> */}
+                              {todoItems.map((item) => {
+                                      return (
+                                              <div className="flex-container mt-10 mx-auto">
+                                              <div key={item.id} class="flex flex-col border border-gray-700 border-opacity-75 p-5 md:p-3 mx-3 md:mx-14 bg-gray-100 rounded-lg">
+                                              <div  class="flex space-between ml-2">
+                                              
+                                              {/* src={require("./image/mypic.png")} */}
+                                              {/* src={item.image} */}
+                                              
+                                              {/* <div class="float-left  text-lg text-black font-medium title-font mb-2">
+                                                  {item.id}
+                                                </div> */}
+                                                    <img
+                                                      className="w-14 h-14 rounded-full"
+                                                      src={require("./image/mypic.png")}
+                                                      alt=""
+                                                    ></img>
+                                                
+                                                
+                                                <div className="delete-button ml-3">
                                                 <button
                                                   onClick={()=>deletetodoItem(item.id)}
-                                                  class="bg-red-300 xs:ml-1 ml-3 w-15 h-10 inline-block rounded px-2 border border-gray-800 text-red-500 hover:bg-red-500 hover:text-white"
+                                                  className="bg-red-300 mt-2 xs:ml-1 w-15 h-10 rounded-lg px-2 border border-gray-800 text-red-500 hover:bg-red-500 hover:text-white"
                                                 >
                                                   Delete
                                                 </button>
-                                                <div class="absolute text-lg text-black font-medium title-font mb-2">
-                                                  {item.id}
                                                 </div>
-                                                
+                                                </div>
+                                                <div>
+                                                <div className="flex-col flex-grow-0 ml-2 py-2 font-medium text-black">
+                                                {item.title}
+                                                </div>
+                                                </div>
+                                                </div>
+                                      
                                               </div>
-                                              <div><p className="font-medium">{item.title}</p></div>
-                                            </div>
-                                            
-                                          </div>
+                                              
+                                              
                                               );
                                                       }
                                         )

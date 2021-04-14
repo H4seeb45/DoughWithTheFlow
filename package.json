@@ -6,6 +6,7 @@
   "homepage": "./",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "@material-ui/core": "latest",
     "@material-ui/lab": "4.0.0-alpha.57",
     "@reduxjs/toolkit": "^1.5.1",
