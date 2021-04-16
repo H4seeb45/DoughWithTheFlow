@@ -1,0 +1,29 @@
+"build:style": "tailwind build src/index.css -o src/tailwind.css",
+"start": "npm run build:style && react-scripts start",
+"main": "index.js",
+
+to be added in package.json scripts block
+
+
+webpack.config.js
+module.exports = {
+    entry: './src/app.js',
+    output: {
+        filename: './dist/app.bundle.js'
+       },
+       devServer:{
+           contentBase: path.join(__dirname,"dist")
+       },
+       mode: "development",
+       resolve: {
+        aliasFields: []
+      },
+      module:{
+        loaders : [
+          {
+              test: /\.json$/,
+              loader: "json-loader"
+            }
+        ]
+        }
+    }

@@ -16,11 +16,12 @@ export default function About () {
     return (
       <div>
       {/* <span className="namespan absolute space-y-3">Haseeb Ahmed</span> */}
-           <div id="about-animation"  className="about-anim"></div>
+           
 
 
           {/* Parent Component */}
-          <div className="mx-auto mt-3 flex flex-row max-w-3xl bg-gray-100 rounded-xl p-6 md:p-0 shadow-md hover:shadow-xl border-2 border-blue-600 animLeft">
+          <div className="about-ctn mx-auto">
+          <div className="font-mono px-5 mx-auto mt-3 flex flex-grow-0 flex-row max-w-3xl bg-gray-100 rounded-xl md:p-0 shadow-md hover:shadow-xl border-2 border-blue-600 animLeft">
           {/* Child Components */}
           <div className="">
           <img src={require('./image/mypic.png')} alt="" className="h-15 w-15 m-2 ml-2 md:block rounded-full border border-2 border-black" width="300" height="300"/>
@@ -31,12 +32,19 @@ export default function About () {
           <div class="pt-5 text-blue-600 mt-auto" >
             Haseeb Ahmed
           </div>
-          <div class="inline text-gray-400 mt-80" >
+          <div className="flex flex-row">
+          <div class="inline text-gray-400" >
             Frontend Developer<br/>
             0300-0769059           
           </div>
+          <div id="about-animation"  className="inline about-anim"></div>
           </div>
+          </div>
+         
         </div>
+
+          </div>
+          
         
       </div>
     );

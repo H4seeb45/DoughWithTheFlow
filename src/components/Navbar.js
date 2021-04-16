@@ -7,7 +7,7 @@ import Features from "./Features";
 import About from "./About";
 import "../tailwind.css";
 import "./navscript";
-import ToDo from "./todolist";
+import ToDo from "./todo/index";
 import Blog from "./Blog";
 import "../styles/animations.css";
 import lottie from "lottie-web";
