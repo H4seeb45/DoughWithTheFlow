@@ -56,6 +56,7 @@ function TopCard() {
               text-align="right"
               variant="contained"
               color="secondary"
+              className="focus:outline-none"
             >
               Add Product
             </Button>

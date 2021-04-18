@@ -39,16 +39,16 @@ const TodoSidebar = props => {
   return (
     <div
       className={classnames('sidebar-left', {
-        show: mainSidebar === true
+        show: true
       })}
     >
       <div className='sidebar'>
         <div className='sidebar-content todo-sidebar'>
           <div className='todo-app-menu'>
             <div className='add-task'>
-              <Button.Ripple color='primary' onClick={handleAddClick} block>
+              <Button color='primary' onClick={handleAddClick} block>
                 Add Task
-              </Button.Ripple>
+              </Button>
             </div>
             <PerfectScrollbar className='sidebar-menu-list' options={{ wheelPropagation: false }}>
               <ListGroup tag='div' className='list-group-filters'>

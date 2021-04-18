@@ -22,7 +22,7 @@ export default function ProductCard() {
         
         <div className="cta-container-btn transition">
           <Button
-            className="cta"
+            className="cta focus:outline-none"
             color="secondary"
             variant="contained"
             style={{ borderRadius: 25 }}

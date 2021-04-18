@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/navbar.css";
-import "../tailwind.css";
+// import "../tailwind.css";
 import "../styles/modal.css";
 
 export default function DeleteModal({ show, handleClose, setTodos, showAlert }) {

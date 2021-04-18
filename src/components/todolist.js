@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../tailwind.css";
+// import "../tailwind.css";
 import "../basis.css";
 import "../styles/loader.css";
 import DeleteModal from "./DeleteModal";

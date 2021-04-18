@@ -5,9 +5,10 @@ import { useParams } from 'react-router-dom'
 // ** Third Party Components
 import classnames from 'classnames'
 
+
 // ** Todo App Components
 import Tasks from './Tasks'
-import Sidebar from './Sidebar'
+import TodoSidebar from './Sidebar'
 import TaskSidebar from './TaskSidebar'
 
 // ** Store & Actions
@@ -51,11 +52,11 @@ const TODO = () => {
         tag: paramsURL.tag || ''
       })
     )
-  }, [store.tasks.length, paramsURL.filter, paramsURL.tag, query, sort])
+  }, [store.tasks.length, paramsURL.filter, paramsURL.tag, query, sort, dispatch])
 
   return (
     <Fragment>
-      <Sidebar
+      <TodoSidebar
         store={store}
         params={params}
         getTasks={getTasks}

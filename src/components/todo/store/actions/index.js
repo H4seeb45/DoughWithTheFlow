@@ -1,4 +1,4 @@
-import {axios} from 'axios'
+import axios from 'axios'
 
 // ** Get Tasks
 export const getTasks = params => {
