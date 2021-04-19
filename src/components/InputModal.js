@@ -33,6 +33,16 @@ export default function InputModal({ show, handleClose, setItems}) {
       });
       console.log(file);
   }
+  
+  let onInputChange = (event =>{
+    console.log(event.target.value)
+
+    if(event.target.value !== ""){
+    document.getElementById("saveBtn").disabled=false;
+    }
+    else
+    document.getElementById("saveBtn").disabled=true;
+  })
 
   let handletodoSave=(event=>{
     let todoDescription = document.getElementById("todoDescription").value;
@@ -79,6 +89,7 @@ export default function InputModal({ show, handleClose, setItems}) {
                         <textarea
                           id="todoDescription"
                           name="about"
+                          onChange={onInputChange}
                           rows="3"
                           class="p-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
                           placeholder="I will do a simple task tomorrow."
@@ -96,13 +107,10 @@ export default function InputModal({ show, handleClose, setItems}) {
                       <div class="mt-1 flex items-center">
                         <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
                           <img
-                            src={require("./image/mypic.png")}
+                            src={require("./image/mypicc.png")}
                             alt="Profile"
                           ></img>
                         </span>
-                        {/* <label id="filelabel" class="none ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                Label Name
-                                </label> */}
                       </div>
                     </div>
 
@@ -151,9 +159,11 @@ export default function InputModal({ show, handleClose, setItems}) {
                     </div>
                   </div>
                   <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                    <button 
+                    <button
+                      id="saveBtn"
+                      disabled
                       onClick={handletodoSave}
-                      class="inline-flex mr-2 justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      class="disabled:opacity-50 inline-flex mr-2 justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                       Save
                     </button>
                     <button
