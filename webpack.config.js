@@ -6,6 +6,10 @@ module.exports = {
        devServer:{
            contentBase: path.join(__dirname,"dist")
        },
+       loader: 'file-loader',
+            options: {
+              esModule: false,
+            },
        mode: "development",
        devtool: "source-map"
     }

@@ -10,23 +10,22 @@
     "@material-ui/core": "latest",
     "@material-ui/lab": "4.0.0-alpha.57",
     "@reduxjs/toolkit": "^1.5.1",
-    "autoprefixer": "^9.8.6",
     "chokidar": "^3.5.1",
     "css": "^3.0.0",
     "lottie-web": "^5.7.8",
-    "postcss": "^7.0.35",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "5.2.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
-    "stylelint": "13.12.0",
-    "tailwind": "^4.0.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
+    "stylelint": "13.12.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.0"
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.10",
+    "react-scripts": "1.0.0",
+    "tailwindcss": "^2.1.1"
   },
   "scripts": {
     "build:style": "tailwind build src/index.css -o src/tailwind.css",
@@ -43,5 +42,17 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/H4seeb45/DoughWithTheFlow/issues"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

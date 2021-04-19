@@ -1,15 +1,21 @@
 .flex-container{
-    
-    width: 50vw;
+    width: 40vw;
     top: 30px;
 }
 .delete-button{
     left: 50vw;
 }
+.todo-ctn{
+    width:100%;
+    
+}
+.tab-selected{
+    background-color: rgb(46, 124, 241);
+    color: white;
+}
 @media only screen and (max-width: 768px) { 
     .flex-container{
-        left: 10vw;
-        width: 90vw;
+        width: 80vw;
         top: 30px;
     }
 }
