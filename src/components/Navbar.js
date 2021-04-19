@@ -28,14 +28,12 @@ export default function NavBar () {
     return (
       <Router>
         <header className="header">
-        
           <nav className="navbar sticky">
           <div id="react-logo"  className="reactlogo"></div>
             <Link
               to="/"
               className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 text-gray-800"
             >
-            
               Portfolio Home
             </Link>
             <ul className="nav-menu">
