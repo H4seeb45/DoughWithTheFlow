@@ -16,7 +16,9 @@ import {
 import NavBar from "./components/Navbar";
 const Main = withRouter(({ location }) => {
   let email = localStorage.getItem("email");
+  // eslint-disable-next-line
   if (email) <Link to="/ToDo"></Link>;
+  // eslint-disable-next-line
   else <Link to="/SignIn"></Link>;
   return (
     <div>
