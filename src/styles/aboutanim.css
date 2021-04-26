@@ -1,22 +1,20 @@
-.about-anim{
-    display:relative;
-    text-align: center;
-    max-width:50vw;
-    margin: 0 auto;
+.nameanim {
+  z-index: -1;
+  animation: bounce 1.5s 0.5s;
+  transform: skew(25);
+}
+@keyframes bounce {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+    /* filter: blur(0px); */
   }
-  /* .namespan{
-      top:26vw;
-      z-index:9999;
-  } */
-
-  /* @media only screen and (max-width: 768px) {
-
-    .namespan{
-        width:10vw;
-
-        top:55vw;
-        z-index:9999;
-    }
-
-
-  } */
+  25% {
+    transform: scale(0.6);
+    /* filter: blur(3px); */
+  }
+  75% {
+    transform: scale(1.4);
+  }
+}

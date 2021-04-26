@@ -21,7 +21,6 @@ li {
   user-select: none;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -35,22 +34,21 @@ a {
   justify-content: flex-start;
   align-items: center;
   padding: 0rem 1.5rem;
-  background: linear-gradient(300deg, #010f1d, rgba(84, 86, 107, 1), #ffffff)
+  background: linear-gradient(300deg, #010f1d, rgba(84, 86, 107, 1), #ffffff);
   /* background-color: #101010; */
 }
 
 .sticky {
   /* position: fixed; */
-  display:relative;
+  display: relative;
   top: 0;
   width: 100%;
 }
 
-.reactlogo{
-  display:relative;
-  max-width:80px;
+.reactlogo {
+  display: relative;
+  max-width: 80px;
 }
-
 
 .hamburger {
   display: none;
@@ -93,7 +91,7 @@ a {
   user-select: none;
   /* background: rgb(224, 6, 79); */
 }
-.nav-item:first-child{
+.nav-item:first-child {
   margin-left: 30rem;
 }
 
@@ -136,9 +134,9 @@ a {
   .nav-menu.active {
     left: 1rem;
   }
-  .reactlogo{
-    display:relative;
-    max-width:50px;
+  .reactlogo {
+    display: relative;
+    max-width: 50px;
   }
 
   .nav-item {
@@ -146,9 +144,8 @@ a {
     border-radius: 1rem solid green;
     padding: 0.5rem;
   }
-  
 
-  .nav-item:first-child{
+  .nav-item:first-child {
     margin-left: 0rem;
   }
 
