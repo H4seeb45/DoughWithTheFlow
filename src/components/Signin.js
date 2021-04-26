@@ -17,6 +17,7 @@ export default function Signin(props) {
       props.history.replace("/ToDo");
     }
   };
+  if (localStorage.getItem("email")) props.history.replace("/ToDo");
   return (
     <section className="min-h-screen flex flex-col bg-blue-500">
       <div className="flex flex-1 items-center justify-center ">

@@ -5,32 +5,44 @@ import About from "./components/About";
 import ToDo from "./components/todolist";
 import Blog from "./components/Blog";
 import NotFound from "./components/NotFound";
-import { BrowserRouter, Route, Redirect, withRouter } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Redirect,
+  withRouter,
+  Switch,
+  Link,
+} from "react-router-dom";
 import NavBar from "./components/Navbar";
 const Main = withRouter(({ location }) => {
+  let email = localStorage.getItem("email");
+  if (email) <Link to="/ToDo"></Link>;
+  else <Link to="/SignIn"></Link>;
   return (
     <div>
-      <Route path="/SignIn" render={(props) => <SignIn {...props} />} />
-      {location.pathname !== "./SignIn" && <NavBar />}
+      {location.pathname !== "/SignIn" && (
+        <Route path="/" render={(props) => <NavBar {...props} />} />
+      )}
+      <Switch>
+        <Route path="/SignIn" render={(props) => <SignIn {...props} />} />
+        <Route path="/Blog">
+          <Blog />
+        </Route>
+        <Route path="/About">
+          <About />
+        </Route>
+        <Route path="/ToDo">
+          <ToDo />
+        </Route>
 
-      <Route path="/Features">
-        <Features />
-      </Route>
-      <Route path="/Blog">
-        <Blog />
-      </Route>
-      <Route path="/About">
-        <About />
-      </Route>
-      <Route path="/ToDo">
-        <ToDo />
-      </Route>
-
-      <Route path="/not-found">
-        <NotFound />
-      </Route>
-
-      <Redirect to="/not-found" />
+        <Route path="/not-found">
+          <NotFound />
+        </Route>
+        <Route path="/Features">
+          <Features />
+        </Route>
+        <Redirect to="/not-found" />
+      </Switch>
     </div>
   );
 });

@@ -3,7 +3,7 @@
   "version": "0.0.222",
   "description": "Live demo",
   "keywords": [],
-  "homepage": "./",
+  "homepage": "/",
   "main": "index.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",

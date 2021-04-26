@@ -15,7 +15,7 @@ import "./navscript";
 
 import { Link } from "react-router-dom";
 // import { mobileMenu, closeMenu } from "./navscript";
-export default function NavBar() {
+export default function NavBar(props) {
   React.useEffect(() => {
     lottie.loadAnimation({
       loop: true,
@@ -24,12 +24,16 @@ export default function NavBar() {
       animationData: ReactIcon,
     });
   }, []);
+  const handleSignOut = () => {
+    localStorage.removeItem("email");
+    props.history.replace("/SignIn");
+  };
   return (
     <header className="header">
       <nav className="navbar sticky">
         <div id="react-logo" className="reactlogo"></div>
         <Link
-          to="/"
+          // to="/"
           className="nav-logo p-2 tansition duration-500 ease-in-out transform hover:-translate-y-1 text-gray-800"
         >
           Portfolio Home
@@ -62,9 +66,17 @@ export default function NavBar() {
           <li className="nav-item tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md hover:bg-blue-500">
             <Link
               to="/ToDo"
-              className="tansition duration-500 ease-in-out p-4 text-lg text-blue-600 hover:text-white"
+              className="tansition duration-500 ease-in-out p-2 text-lg text-blue-600 hover:text-white"
             >
               Todo List
+            </Link>
+          </li>
+          <li className="nav-item tansition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow rounded-md hover:bg-red-500">
+            <Link
+              onClick={handleSignOut}
+              className="tansition duration-500 ease-in-out p-4 text-lg text-red-600 hover:text-white"
+            >
+              Logout
             </Link>
           </li>
         </ul>

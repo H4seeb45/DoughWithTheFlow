@@ -80,9 +80,7 @@ a {
 }
 
 .nav-item {
-  /* border: 2px solid #fff; */
-  /* border-radius: 5px; */
-  margin-left: 5rem;
+  margin-left: 3rem;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
