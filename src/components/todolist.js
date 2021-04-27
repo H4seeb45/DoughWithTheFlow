@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../tailwind.css";
 import "../basis.css";
 import "../styles/loader.css";
 import DeleteModal from "./DeleteModal";
@@ -68,12 +67,11 @@ export default function todolist() {
     // Filtering Items
     var tab = event.target;
     tab.classList.add("tab-selected");
-    if(event.target.innerHTML==="Active")
-    setfilteredItems(todoItems.filter((item) => item.completed === false ))
-    if(event.target.innerHTML==="Completed")
-    setfilteredItems(todoItems.filter((item) => item.completed === true ))
-    if(event.target.innerHTML==="All")
-    setfilteredItems(todoItems)
+    if (event.target.innerHTML === "Active")
+      setfilteredItems(todoItems.filter((item) => item.completed === false));
+    if (event.target.innerHTML === "Completed")
+      setfilteredItems(todoItems.filter((item) => item.completed === true));
+    if (event.target.innerHTML === "All") setfilteredItems(todoItems);
   }
   // useEffect Hook to fetch todo items
   useEffect(() => {
@@ -104,14 +102,14 @@ export default function todolist() {
   //Different styles of span Components for  based on state values.
   function ActiveComponent() {
     return (
-      <span class="float-right mt-1 mr-2 bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-md">
+      <span className="float-right mt-1 mr-2 bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-md">
         Active
       </span>
     );
   }
   function CompletedComponent() {
     return (
-      <span class="float-right mt-1 mr-2 bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
+      <span className="float-right mt-1 mr-2 bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
         Completed
       </span>
     );
@@ -133,12 +131,12 @@ export default function todolist() {
     //if isLoaded varibale is false it means content is still loading
   } else if (!isLoaded) {
     return (
-      <div class="loader">
+      <div className="loader">
         <div class="loadercontainer">
-          <div class="loaderdiv loaderyellow"></div>
-          <div class="loaderdiv loaderred"></div>
-          <div class="loaderdiv loaderblue"></div>
-          <div class="loaderdiv loaderviolet"></div>
+          <div className="loaderdiv loaderyellow"></div>
+          <div className="loaderdiv loaderred"></div>
+          <div className="loaderdiv loaderblue"></div>
+          <div className="loaderdiv loaderviolet"></div>
         </div>
       </div>
     );
@@ -146,21 +144,17 @@ export default function todolist() {
   } else {
     return (
       <div>
-      {/* for Modal which saves new todoitem */}
-        <InputModal
-          show={varInputModal}
-          handleClose={hideInputModal}
-          setItems={setItems}
-        ></InputModal>
+        {/* for Modal which saves new todoitem */}
+
         <div class="h-auto bg-white mx-auto rounded shadow p-6 my-4 w-full lg:w-3/4 lg:max-w-3xl">
-          <section class="text-gray-400">
+          <section className="text-gray-400">
             <div className="todo-ctn">
-              <div class="mt-3 container px-5 mx-auto">
-                <div class="flex flex-wrap w-full flex-col items-center text-center">
-                  <h1 class="mt-3 text-2xl lg:text-3xl font-medium title-font mb-1 text-black">
+              <div className="mt-3 container px-5 mx-auto">
+                <div className="flex flex-wrap w-full flex-col items-center text-center">
+                  <h1 className="mt-3 text-2xl lg:text-3xl font-medium title-font mb-1 text-black">
                     To Do Items List
                   </h1>
-                  <p class="lg:w-1/2 text-xl w-full leading-relaxed text-opacity-80">
+                  <p className="lg:w-1/2 text-xl w-full leading-relaxed text-opacity-80">
                     Todo Items given are being loaded via RESTApi. You can add
                     or delete item.
                   </p>
@@ -170,28 +164,28 @@ export default function todolist() {
                 <button
                   onClick={() => showInputModal()}
                   type="button"
-                  class="bg-green-200 w-40 h-15 py-3 rounded-full border border-gray-800 text-green-500 hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="bg-green-200 w-40 h-15 py-3 rounded-full border border-gray-800 text-green-500 hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Add Todo
                 </button>
               </div>
               <div className="mt-5 md:w-lg border-b border-gray-500 text-center">
-                <ul class="flex justify-center mx-auto">
+                <ul className="flex justify-center mx-auto">
                   <li
                     onClick={handletabclick}
-                    class="tab1 cursor-pointer py-2 px-6 text-gray-500 bg-gray-300 rounded-t-lg"
+                    className="tab1 cursor-pointer py-2 px-6 text-gray-500 bg-gray-300 rounded-t-lg"
                   >
                     All
                   </li>
                   <li
                     onClick={handletabclick}
-                    class="tab2 cursor-pointer ml-2 py-2 px-6 rounded-t-lg text-gray-500 bg-gray-300"
+                    className="tab2 cursor-pointer ml-2 py-2 px-6 rounded-t-lg text-gray-500 bg-gray-300"
                   >
                     Active
                   </li>
                   <li
                     onClick={handletabclick}
-                    class="tab3 cursor-pointer ml-2 py-2 px-6 rounded-t-lg text-gray-500 bg-gray-300"
+                    className="tab3 cursor-pointer ml-2 py-2 px-6 rounded-t-lg text-gray-500 bg-gray-300"
                   >
                     Completed
                   </li>
@@ -200,16 +194,16 @@ export default function todolist() {
 
               {/* Start of Dynamic comments Cards */}
               {/* <div key={item.id} class="flex-1 flex-wrap align-center md:mx-14 mx-3 p-9"> */}
-              {console.log("before render", filteredItems)}
+
               {filteredItems.map((item) => {
                 const TagName = components[item.completed];
                 return (
-                  <div className="flex-container relative mt-5 mx-auto">
-                    <div
-                      key={item.id}
-                      class="relative flex flex-col border border-gray-700 border-opacity-75 p-5 md:p-3 mx-auto bg-gray-100 rounded-lg"
-                    >
-                      <div class="flex-inline ml-2">
+                  <div
+                    key={item.id}
+                    className="flex-container relative mt-5 mx-auto"
+                  >
+                    <div className="relative flex flex-col border border-gray-700 border-opacity-75 p-5 md:p-3 mx-auto bg-gray-100 rounded-lg">
+                      <div className="flex-inline ml-2">
                         <img
                           src={require("./image/mypicc.png")}
                           className="inline-block w-14 h-14 rounded-full"
@@ -252,6 +246,12 @@ export default function todolist() {
           setTodos={setItems}
           showAlert={showAlert}
         ></DeleteModal>
+        {/* Input Modal for Getting TodoItemInput */}
+        <InputModal
+          show={varInputModal}
+          handleClose={hideInputModal}
+          setItems={setItems}
+        ></InputModal>
       </div>
     );
   }

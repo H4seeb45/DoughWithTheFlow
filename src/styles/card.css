@@ -23,7 +23,7 @@ body {
 } */
 
 .card {
-  display:relative;
+  display: relative;
   border-radius: 22px;
   border-width: 3px;
   border-style: outset;
@@ -47,7 +47,7 @@ body {
 
 h5 {
   text-align: center;
-  /* z-index: 9999; */
+
   font-size: 26px;
   color: black;
   width: 100%;
