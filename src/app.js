@@ -11,18 +11,12 @@ import {
   Redirect,
   withRouter,
   Switch,
-  Link,
 } from "react-router-dom";
 import NavBar from "./components/Navbar";
-const Main = withRouter(({ location }) => {
-  let email = localStorage.getItem("email");
-  // eslint-disable-next-line
-  if (email) <Link to="/ToDo"></Link>;
-  // eslint-disable-next-line
-  else <Link to="/SignIn"></Link>;
+const Main = withRouter((props) => {
   return (
     <div>
-      {location.pathname !== "/SignIn" && (
+      {props.location.pathname !== "/SignIn" && (
         <Route path="/" render={(props) => <NavBar {...props} />} />
       )}
       <Switch>
@@ -43,7 +37,7 @@ const Main = withRouter(({ location }) => {
         <Route path="/Features">
           <Features />
         </Route>
-        <Redirect to="/not-found" />
+        <Redirect to="/Features" />
       </Switch>
     </div>
   );
